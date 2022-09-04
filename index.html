@@ -6,32 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Teens</title>
+    <link rel="shortcut icon" href="assets/images/side-view-woman-silhouette.png" type="image/x-icon">
 </head>
 <body class="body">
-    <section >
+    <section class="header">
         <div class="container">
             <div class="navbar">
-        <div class="logo">
+        <a class="logo item-0" href="#">
             <img src="assets/images/logo.png" alt="">
-        </div>
+        </a>
         <ul class="nav--items">
-            <li>
-                <a href="#">About Us</a>
+            <li  class="nav--item item-1">
+                <a href="#about">About Us</a>
             </li>
-            <li>
-                <a href="#">Services</a>
+            <li class="nav--item item-2">
+                <a href="#service">Services</a>
             </li>
-            <li>
-                <a href="#">Our Team</a>
+            <li class="nav--item item-3">
+                <a href="#team">Our Team</a>
             </li>
-            <li>
-                <a href="#">Testimonials</a>
+            <li class="nav--item item-4">
+                <a href="#testimonial">Testimonials</a>
             </li>
-            <li>
-                <a class="btn nav--btn" href="tel:0770466099">Call now</a>
+            <li class="nav--item item-5">
+                <a class="btn nav--btn" href="tel:+94770466099">Call now</a>
             </li>
-          
+           
         </ul>
         <div class="menu" id="menu">
             <i class="ri-menu-line"></i>
@@ -49,14 +50,15 @@
             </div>
                 
         </div>
-        <video class="hero--video" preload=""  autoplay loop>
+        <div class="hero--video--wrapper">
+        <video class="hero--video"  autoplay loop muted playsinline>
             <source src="./assets/videos/teens.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-       
+       </div>
        
     </section>
-    <section class="about section--wrapper">
+    <section class="about section--wrapper" id="about">
         <div class="container">
             <div class="title">
                 <h3>Teens in 2022</h3>
@@ -109,7 +111,7 @@
             </div>
         </div>
     </section>
-    <section class="services section--wrapper">
+    <section class="services section--wrapper" id="service">
         <div class="container">
             <div class="title">
                 <h3>Naturally, You!</h3>
@@ -273,7 +275,7 @@
     <section class="image">
         <img src="assets/images/cream.jpg" alt="">
     </section>
-    <section class="team section--wrapper">
+    <section class="team section--wrapper" id="team">
         <div class="container">
             <div class="title">
                 <h3>Our popular stylists</h3>
@@ -322,7 +324,7 @@
             </div>
             </div>
     </section>
-    <section class="testimonials section--wrapper">
+    <section class="testimonials section--wrapper" id="testimonial">
         <div class="container">
             <div class="title">
                 <h3>Testimonials</h3>
@@ -377,7 +379,7 @@
             </div>
             <div class="footer--item">
                 <h2>Get in touch</h2>
-                <a class="touch--item" href="tel:0770466099">
+                <a class="touch--item" href="tel:+94770466099">
                     <i class="ri-phone-line"></i>
                     <p> 077 046 6099</p>
                 </a>

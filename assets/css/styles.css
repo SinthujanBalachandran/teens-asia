@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -33,6 +34,7 @@ p{
     cursor: pointer;
     transition: .3s;
     text-decoration: none;
+    font-size: 1rem;
 }
 .btn:hover{
     background: linear-gradient(90deg, #8E00C9, #B3007B);
@@ -51,15 +53,29 @@ p{
 
 
 /* navbar */
-.navbar{
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
     
+    z-index: 999;
+   
+   
+}
+
+.header.scroll-header{
+     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.6);
+     background: linear-gradient(90deg, #1B1C20, #232428);
+}
+.navbar{
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
-    z-index: 999;
-    background: linear-gradient(90deg, #1B1C20, #232428);
-    
+  
 }
 
 .logo img{
@@ -74,6 +90,11 @@ p{
 
 .nav--items li a{
     color: #fff;
+    font-size: 1rem;
+}
+.nav--item:hover a:not(a.nav--btn){
+    color: #B3007B ;
+    
 }
 
 .nav--btn{
@@ -96,15 +117,31 @@ p{
 
 .hero{
     position: relative;
-    height: calc(100vh - 80px);
+    height: 100vh ;
 }
 
 .hero--video{
-    height: calc(100vh - 80px);
+    height: 100vh ;
     width: 100%;
     object-fit: cover;
     pointer-events: none;
     position: relative;
+}
+
+.hero--video--wrapper{
+    position: relative;
+    height: 100vh ;
+}
+
+.hero--video--wrapper::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 50;
 }
 
 
@@ -115,7 +152,7 @@ top: 45%;
 left: 0;
 right: 0;
 
-z-index: 10;
+z-index: 70;
 
 }
 
@@ -612,9 +649,8 @@ grid-row-start: 1;
     }
 
     .nav--items{
-        position: absolute;
+        position: fixed;
         top: 80px;
-
         left: 0;
         width: 100%;
         height: 100vh;
@@ -625,13 +661,18 @@ grid-row-start: 1;
         backdrop-filter: blur(15px);
         border-top: 1px solid #999;
         padding: 2rem 0 3rem;
-        transform: translateY(-100%);
+        transform: translateX(100%);
+        
     }
 
-    .nav--items.active--menu {
+    .header.active--menu .nav--items{
         
         z-index: 999;
-        transform: translateY(0%);
+        transform: translateX(0%);
+    }
+
+    .header.active--menu{
+        background: linear-gradient(90deg, #1B1C20, #232428);
     }
    
     .hero--text{
