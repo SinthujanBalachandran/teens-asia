@@ -252,6 +252,7 @@ border-radius: .3rem;
 
 .service--type{
     margin-bottom: 8rem;
+    overflow: hidden;
 }
 
 .body--care{
@@ -680,7 +681,7 @@ grid-row-start: 1;
       
         }
         .img--box--large{
-            width: 260px;
+            max-width: 260px;
             height: 380px;
         }
         .image{
@@ -785,7 +786,7 @@ font-size: 2.5rem;
         margin-right: 0rem;
     }
     .img-box-horizontal{
-        width: 300px;
+        max-width: 300px;
         height: 200px;
     }
     .footer--items{

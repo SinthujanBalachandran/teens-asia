@@ -53,6 +53,6 @@ sr.reveal(`.skin--care--text,.body--care--text`,{
     interval:'100'
 })
 sr.reveal(`.about--item,.bridal--images,.skin--care--images, .hair--care--images,.stylist,.testimonial`,{
-    delay:'600',
+    delay:'100',
     interval:'100'
 })
