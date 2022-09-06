@@ -28,3 +28,31 @@ function scrollHeader() {
 }
 
 window.addEventListener('scroll', scrollHeader)
+
+
+// scroll reveal
+
+// ScrollReveal().reveal('.hero--text,.inner--container');
+
+const sr = ScrollReveal({
+    distance: '60px',
+    duration: 2000,
+    delay:'200'
+})
+
+sr.reveal(`.hero--text, .title,.image`,{
+    origin:'top',
+    interval:'100'
+})
+sr.reveal(`.inner--container--text, .hair--care--text`,{
+    origin:'left',
+    interval:'100'
+})
+sr.reveal(`.skin--care--text,.body--care--text`,{
+    origin:'right',
+    interval:'100'
+})
+sr.reveal(`.about--item,.bridal--images,.skin--care--images, .hair--care--images,.stylist,.testimonial`,{
+    delay:'600',
+    interval:'100'
+})
